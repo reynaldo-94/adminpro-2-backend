@@ -1,9 +1,16 @@
 - npm init: Inicial nuestro pryecto, nos crea el archivo package.json
-- npm install express --save: Crea la dependencia express
+- npm install express --save: Crea la dependencia express, es uno de los frameworks mas populares para hacer backends
+- npm i express-validator: Ese express validator me va a permitir a mi hacer validaciones semiautomaticas en cada una de las rutas que yo quiero
 - npm install -g nodemon: Esto nos ayuda a que cada vez que nosotros hagamos un cambio recargue todo el backend server de manera automatica, configurar el archivo package json dentro de script aumentar codigo
 - npm i mongoose: Instala mongoose para conectar a la BD mongo, ojo i=install
 - npm i dotenv: Me permite ller archivos con la extension .env, todos los archivos .env sus variables van a ahcer string aunque no parezcan
 - npm i cors: Me sirve para hacer las configuracon en mi servidor para que me acepten peticiones de diferentes dominios
+- npm i bcryptjs : Encriptar contraseñas
+- npm i jsonwebtoken : Generar tokens
+
+* UN TOKEN ES UTILIZADO PARA MANTENER DE FORMA PASIVA EL ESTADO DEL USUARIO EN NUESTRA APLICACION
+* El jWT consta de 3 partes lo que es el header, el payload y lo que es la firma
+* El uso de JWT lo voy a ocupar para validar las rutas en las cuales yo quiero tener cierto tipo de proteccion o que solo ciertos usuarios o usuario autenticados puedan ejecutar
 
 
 * En el node_modules ahi se encuentro todos los modulos de NODE necesarios para correr la aplicacion
@@ -19,3 +26,4 @@
 - Los codigos 500: Son errores directamente relacioados al servidor, son errores del backend
 
 * CLUSTER: Entiendase cluster como un conjunto de servidores
+* Se recomienda que los archivos .env nose suba al repositorio

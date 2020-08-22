@@ -10,9 +10,13 @@ const { dbConnection } = require('./database/config');
 const app = express();
 
 // Confugrar CORS
-// El use es conocido como un midlleware, los midlleware no son mas que una funcion que se va a ejecutarm siempre para todas las lineas que sigan hacia abajo
+// El use es conocido como un midlleware, los midlleware no son mas que una funcion que se va a ejecutar siempre para todas las lineas que sigan hacia abajo
 // Siempre que ejecute algo va a pasar por aca
 app.use(cors());
+
+// LECTURA Y PARSE DEL BODY
+// Esto se coloca antes de poner las rutas
+app.use( express.json() )
 
 // Base de datos
 dbConnection();
@@ -30,14 +34,9 @@ dbConnection();
 // mean_user
 // fZt5LFEgLsk0Y9p1
 
-app.get( '/', (req, res) => {
-
-    // res.json({
-    res.status(400).json({
-        ok: true,
-        msg: 'Hola Mundo'
-    })
-})
+// RYTAS
+app.use( '/api/usuarios', require('./routes/usuarios' ));
+app.use( '/api/login', require('./routes/auth' ));
 
 // Uso el puerto 400
 // app.listen( 3000, () => {
