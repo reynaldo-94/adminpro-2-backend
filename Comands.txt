@@ -1,0 +1,21 @@
+- npm init: Inicial nuestro pryecto, nos crea el archivo package.json
+- npm install express --save: Crea la dependencia express
+- npm install -g nodemon: Esto nos ayuda a que cada vez que nosotros hagamos un cambio recargue todo el backend server de manera automatica, configurar el archivo package json dentro de script aumentar codigo
+- npm i mongoose: Instala mongoose para conectar a la BD mongo, ojo i=install
+- npm i dotenv: Me permite ller archivos con la extension .env, todos los archivos .env sus variables van a ahcer string aunque no parezcan
+- npm i cors: Me sirve para hacer las configuracon en mi servidor para que me acepten peticiones de diferentes dominios
+
+
+* En el node_modules ahi se encuentro todos los modulos de NODE necesarios para correr la aplicacion
+* package-lock.json: Nos dice como fue creado cada uno de nuestro paquete, nose modifica manualmente
+* index.js: Punto inicial de nuestra aplicacion
+* node tiene un interprete de JS en el lado del backend
+
+
+* CODIGOS DE ERRORES
+- Usualmente cualquier codigo 200, significa que todo se ha echo correctamente
+- Usualmente cualquier codigo 300, significa que el recurso se movio a otro lugar,esto se usa para fines educativos o explicativos
+- Los codigos 400: Hubo un error, que nosotros tuvimos un error no enviamos los datos correctamente, errores del front end
+- Los codigos 500: Son errores directamente relacioados al servidor, son errores del backend
+
+* CLUSTER: Entiendase cluster como un conjunto de servidores
